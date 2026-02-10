@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Academic Professional - Forest Green & Gold */
+    --background: 192 42% 96%;
+    --foreground: 192 62% 20%;
+
+    --card: 192 42% 94%;
+    --card-foreground: 192 62% 20%;
+
+    --popover: 192 42% 96%;
+    --popover-foreground: 192 62% 20%;
+
+    /* Forest Green - Primary */
+    --primary: 192 62% 19%;
+    --primary-foreground: 192 42% 96%;
+
+    /* Warm Cream */
+    --secondary: 12 42% 92%;
+    --secondary-foreground: 192 62% 20%;
+
+    --muted: 12 32% 92%;
+    --muted-foreground: 192 22% 37%;
+
+    /* Academic Gold - Accent */
+    --accent: 222 70% 91%;
+    --accent-foreground: 222 70% 20%;
+
+    --destructive: 0 76% 90%;
+    --destructive-foreground: 0 63% 31%;
+
+    --border: 12 22% 91%;
+    --input: 12 22% 91%;
+    --ring: 192 62% 19%;
+
+    --radius: 0.25rem;
+
+    /* Extended palette */
+    --success: 150 60% 35%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 42 85% 50%;
+    --warning-foreground: 150 30% 15%;
+
+    --info: 200 70% 45%;
+    --info-foreground: 0 0% 100%;
+
+    /* Grade colors */
+    --grade-a: 150 60% 35%;
+    --grade-b: 200 70% 45%;
+    --grade-c: 42 85% 50%;
+    --grade-d: 30 80% 50%;
+    --grade-e: 15 75% 55%;
+    --grade-f: 0 72% 51%;
+
+    /* Header */
+    --header-background: 150 45% 20%;
+    --header-foreground: 40 30% 95%;
+
+    /* Sidebar */
+    --sidebar-background: 192 42% 96%;
+    --sidebar-foreground: 192 62% 25%;
+    --sidebar-primary: 192 62% 19%;
+    --sidebar-primary-foreground: 192 42% 96%;
+    --sidebar-accent: 12 42% 92%;
+    --sidebar-accent-foreground: 192 62% 20%;
+    --sidebar-border: 12 22% 91%;
+    --sidebar-ring: 12 12% 75%;
+    --sidebar-muted: 150 25% 50%;
+    --chart-1: 192 58% 39%;
+    --chart-2: 222 76% 61%;
+    --chart-3: 252 37% 24%;
+    --chart-4: 282 74% 66%;
+    --chart-5: 312 87% 67%;
+    --sidebar: 248 0.3% 98.4%;
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 192 4% 9%;
+    --foreground: 192 42% 70%;
+
+    --card: 192 4% 6%;
+    --card-foreground: 192 42% 70%;
+
+    --popover: 192 4% 9%;
+    --popover-foreground: 192 42% 70%;
+
+    --primary: 192 42% 94%;
+    --primary-foreground: 192 4% 9%;
+
+    --secondary: 12 12% 16%;
+    --secondary-foreground: 192 42% 70%;
+
+    --muted: 12 7% 16%;
+    --muted-foreground: 12 12% 75%;
+
+    --accent: 222 30% 18%;
+    --accent-foreground: 222 70% 70%;
+
+    --destructive: 0 33% 20%;
+    --destructive-foreground: 0 91% 71%;
+
+    --border: 12 7% 16%;
+    --input: 12 2% 25%;
+    --ring: 12 12% 83%;
+
+    --header-background: 150 30% 10%;
+    --header-foreground: 40 25% 95%;
+
+    --sidebar-background: 192 4% 9%;
+    --sidebar-foreground: 12 42% 95%;
+    --sidebar-primary: 222 70% 55%;
+    --sidebar-primary-foreground: 192 42% 70%;
+    --sidebar-accent: 12 7% 16%;
+    --sidebar-accent-foreground: 12 42% 95%;
+    --sidebar-border: 12 7% 16%;
+    --sidebar-ring: 12 12% 83%;
+    --chart-1: 192 70% 50%;
+    --chart-2: 312 75% 55%;
+    --chart-3: 222 80% 55%;
+    --chart-4: 112 65% 60%;
+    --chart-5: 352 60% 45%;
+    --sidebar: 266 4% 20.8%;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --radius: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', serif;
+  }
+}
+
+@layer components {
+  /* Page Layout */
+  .page-header {
+    @apply mb-6 pb-4 border-b border-border;
+  }
+
+  .page-title {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight text-foreground;
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .page-description {
+    @apply text-muted-foreground mt-1;
+  }
+
+  /* Cards */
+  .stat-card {
+    @apply bg-card rounded-md border p-5 transition-all duration-200;
+    @apply shadow-sm hover:shadow-md;
+  }
+
+  .stat-card-highlight {
+    @apply bg-primary text-primary-foreground rounded-md p-5;
+    @apply shadow-md;
+  }
+
+  .chart-card {
+    @apply bg-card rounded-md border p-5 shadow-sm;
+  }
+
+  /* Academic-style table */
+  .academic-table {
+    @apply w-full text-sm;
+  }
+
+  .academic-table th {
+    @apply bg-muted/50 text-left py-3 px-4 font-semibold text-foreground border-b-2 border-primary/20;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .academic-table td {
+    @apply py-3 px-4 border-b border-border;
+  }
+
+  .academic-table tr:hover td {
+    @apply bg-muted/30;
+  }
+
+  /* Grade Badges */
+  .grade-badge {
+    @apply inline-flex items-center justify-center rounded px-2.5 py-1 text-xs font-bold tracking-wide;
+  }
+
+  .grade-a { @apply bg-success/15 text-success border border-success/30; }
+  .grade-b { @apply bg-info/15 text-info border border-info/30; }
+  .grade-c { @apply bg-warning/15 text-warning-foreground border border-warning/30; }
+  .grade-d { @apply bg-[hsl(30,80%,50%)]/15 text-[hsl(30,80%,40%)] border border-[hsl(30,80%,50%)]/30; }
+  .grade-e { @apply bg-[hsl(15,75%,55%)]/15 text-[hsl(15,75%,45%)] border border-[hsl(15,75%,55%)]/30; }
+  .grade-f { @apply bg-destructive/15 text-destructive border border-destructive/30; }
+
+  /* Navigation styles */
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium transition-all duration-200 rounded-sm;
+  }
+
+  .nav-link-active {
+    @apply border-b-2 border-accent rounded-none;
+  }
+
+  /* Section dividers */
+  .section-divider {
+    @apply border-t-2 border-primary/20 my-8;
+  }
+
+  /* Gold accent elements */
+  .gold-accent {
+    @apply text-accent font-semibold;
+  }
+
+  .gold-border {
+    @apply border-l-4 border-accent pl-4;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-accent to-yellow-500 bg-clip-text text-transparent;
+  }
+}
